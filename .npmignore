@@ -1,0 +1,18 @@
+# Source files
+src/
+
+# Config files
+tsconfig.json
+.gitignore
+.gitattributes
+
+# Documentation (keep README.md)
+TAILWIND.md
+
+# Development files
+*.log
+.vscode/
+.idea/
+
+# Git
+.git/
