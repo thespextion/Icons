@@ -1,5 +1,5 @@
-# Source files
-src/
+# DON'T ignore src/ - React Native needs it for .native.tsx files
+# src/
 
 # Config files
 tsconfig.json

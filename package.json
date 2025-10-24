@@ -1,7 +1,7 @@
 {
   "name": "@spextion/icons",
-  "version": "0.1.0",
-  "description": "A collection of beautiful icons for Next.js with TypeScript and Tailwind CSS support",
+  "version": "0.2.0",
+  "description": "A collection of beautiful icons for React, React Native, Expo, and Next.js with TypeScript support",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,8 +13,10 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
+  "react-native": "./src/index.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
@@ -23,6 +25,8 @@
   "keywords": [
     "icons",
     "react",
+    "react-native",
+    "expo",
     "nextjs",
     "typescript",
     "tailwind",
@@ -37,11 +41,15 @@
     "url": "https://github.com/thespextion/Icons.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native-svg": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
