@@ -1,9 +1,9 @@
-import React from 'react';
-import { IconProps } from '../types';
+import React from "react";
+import { IconProps } from "../types";
 
 export const Search: React.FC<IconProps> = ({
   size = 24,
-  className = '',
+  className = "",
   ...props
 }) => {
   return (

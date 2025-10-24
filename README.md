@@ -26,7 +26,7 @@ pnpm add @spextion/icons
 ### Basic Usage
 
 ```tsx
-import { Home, User, Search } from '@spextion/icons';
+import { Home, User, Search } from "@spextion/icons";
 
 export default function MyComponent() {
   return (
@@ -42,9 +42,9 @@ export default function MyComponent() {
 ### With Next.js App Router
 
 ```tsx
-'use client';
+"use client";
 
-import { Heart, Settings } from '@spextion/icons';
+import { Heart, Settings } from "@spextion/icons";
 
 export default function Page() {
   return (
@@ -61,13 +61,11 @@ export default function Page() {
 The icons work perfectly with Tailwind utility classes:
 
 ```tsx
-import { Home } from '@spextion/icons';
+import { Home } from "@spextion/icons";
 
 export default function Navigation() {
   return (
-    <Home
-      className="w-6 h-6 text-blue-500 hover:text-blue-700 transition-colors cursor-pointer"
-    />
+    <Home className="w-6 h-6 text-blue-500 hover:text-blue-700 transition-colors cursor-pointer" />
   );
 }
 ```
@@ -76,11 +74,11 @@ export default function Navigation() {
 
 All icon components accept the following props:
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `size` | `number \| string` | `24` | Sets both width and height of the icon |
-| `className` | `string` | `''` | Additional CSS classes (Tailwind classes work great!) |
-| `...props` | `SVGProps<SVGSVGElement>` | - | Any valid SVG element props |
+| Prop        | Type                      | Default | Description                                           |
+| ----------- | ------------------------- | ------- | ----------------------------------------------------- |
+| `size`      | `number \| string`        | `24`    | Sets both width and height of the icon                |
+| `className` | `string`                  | `''`    | Additional CSS classes (Tailwind classes work great!) |
+| `...props`  | `SVGProps<SVGSVGElement>` | -       | Any valid SVG element props                           |
 
 ## Available Icons
 
@@ -125,13 +123,13 @@ import { Home } from '@spextion/icons';
 ### Custom Styling
 
 ```tsx
-import { Settings } from '@spextion/icons';
+import { Settings } from "@spextion/icons";
 
 <Settings
   size={24}
   className="text-blue-500"
-  style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
-/>
+  style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))" }}
+/>;
 ```
 
 ## TypeScript Support
@@ -139,7 +137,7 @@ import { Settings } from '@spextion/icons';
 All components are written in TypeScript and include full type definitions:
 
 ```tsx
-import { IconProps } from '@spextion/icons';
+import { IconProps } from "@spextion/icons";
 
 // Use IconProps for custom wrapper components
 const CustomIcon: React.FC<IconProps> = (props) => {

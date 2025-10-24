@@ -24,15 +24,15 @@ npx tailwindcss init -p
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 3. Add Tailwind directives to your CSS (e.g., `globals.css`):
@@ -92,16 +92,18 @@ import { Heart, Settings } from '@your-scope/ex-pack';
 ### Responsive Design
 
 ```tsx
-import { Home } from '@your-scope/ex-pack';
+import { Home } from "@your-scope/ex-pack";
 
-<Home className="
+<Home
+  className="
   w-4 h-4
   md:w-6 md:h-6
   lg:w-8 lg:h-8
   text-blue-500
   md:text-blue-600
   lg:text-blue-700
-" />
+"
+/>;
 ```
 
 ### Dark Mode Support
@@ -124,7 +126,7 @@ import { User } from '@your-scope/ex-pack';
 ### Navigation Icons
 
 ```tsx
-import { Home, User, Search, Settings } from '@your-scope/ex-pack';
+import { Home, User, Search, Settings } from "@your-scope/ex-pack";
 
 export default function Navigation() {
   return (
@@ -141,11 +143,12 @@ export default function Navigation() {
 ### Button with Icon
 
 ```tsx
-import { Heart } from '@your-scope/ex-pack';
+import { Heart } from "@your-scope/ex-pack";
 
 export default function LikeButton() {
   return (
-    <button className="
+    <button
+      className="
       flex items-center gap-2
       px-4 py-2
       bg-white
@@ -153,7 +156,8 @@ export default function LikeButton() {
       border border-gray-300
       rounded-lg
       transition-colors
-    ">
+    "
+    >
       <Heart className="w-5 h-5 text-red-500" />
       <span className="text-gray-700">Like</span>
     </button>
@@ -164,13 +168,14 @@ export default function LikeButton() {
 ### Icon with Badge
 
 ```tsx
-import { User } from '@your-scope/ex-pack';
+import { User } from "@your-scope/ex-pack";
 
 export default function UserWithBadge() {
   return (
     <div className="relative inline-block">
       <User className="w-8 h-8 text-gray-700" />
-      <span className="
+      <span
+        className="
         absolute -top-1 -right-1
         w-4 h-4
         bg-red-500
@@ -178,7 +183,8 @@ export default function UserWithBadge() {
         text-xs
         rounded-full
         flex items-center justify-center
-      ">
+      "
+      >
         3
       </span>
     </div>
@@ -189,19 +195,17 @@ export default function UserWithBadge() {
 ### Loading State with Animation
 
 ```tsx
-import { Settings } from '@your-scope/ex-pack';
+import { Settings } from "@your-scope/ex-pack";
 
 export default function LoadingIcon() {
-  return (
-    <Settings className="w-6 h-6 text-blue-500 animate-spin" />
-  );
+  return <Settings className="w-6 h-6 text-blue-500 animate-spin" />;
 }
 ```
 
 ### Icon Grid
 
 ```tsx
-import { Home, User, Search, Heart, Settings } from '@your-scope/ex-pack';
+import { Home, User, Search, Heart, Settings } from "@your-scope/ex-pack";
 
 export default function IconGrid() {
   return (
@@ -244,26 +248,26 @@ export default function IconGrid() {
 Create a reusable icon button component:
 
 ```tsx
-import { IconProps } from '@your-scope/ex-pack';
-import React from 'react';
+import { IconProps } from "@your-scope/ex-pack";
+import React from "react";
 
 interface IconButtonProps {
   icon: React.ComponentType<IconProps>;
   label: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?: "primary" | "secondary" | "danger";
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({
   icon: Icon,
   label,
   onClick,
-  variant = 'primary',
+  variant = "primary",
 }) => {
   const variants = {
-    primary: 'text-blue-500 hover:text-blue-700 hover:bg-blue-50',
-    secondary: 'text-gray-500 hover:text-gray-700 hover:bg-gray-50',
-    danger: 'text-red-500 hover:text-red-700 hover:bg-red-50',
+    primary: "text-blue-500 hover:text-blue-700 hover:bg-blue-50",
+    secondary: "text-gray-500 hover:text-gray-700 hover:bg-gray-50",
+    danger: "text-red-500 hover:text-red-700 hover:bg-red-50",
   };
 
   return (
@@ -282,6 +286,6 @@ export const IconButton: React.FC<IconButtonProps> = ({
 };
 
 // Usage
-import { Heart } from '@your-scope/ex-pack';
-<IconButton icon={Heart} label="Like" variant="danger" />
+import { Heart } from "@your-scope/ex-pack";
+<IconButton icon={Heart} label="Like" variant="danger" />;
 ```
